@@ -10,7 +10,7 @@ package com.sjyang.common;
 public class StringContainString {
     public static void main(String[] args) {
         String str1 = "aaaa(temp)";
-        String str2 = "(t1emp)";
+        String str2 = "(temp)";
         containOtherString(str1,str2);
     }
     public static void containOtherString(String str1,String str2){
