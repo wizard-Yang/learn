@@ -8,4 +8,8 @@ package com.sjyang;
  * @version:
  */
 public class GitTest {
+    public static void main(String[] args) {
+        int a = 9>5?(9>4?9:4):(5>4?5:4);
+        System.out.println(a);
+    }
 }

@@ -1,4 +1,4 @@
-package com.sjyang.arithmetic;
+package com.sjyang.算法;
 
 /**
  * @author ：saijun.yang
