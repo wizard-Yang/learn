@@ -4,6 +4,11 @@ package com.sjyang.排序;
  * @author ：saijun.yang
  * @date ：Created in 2019/5/15 8:41
  * @description：冒泡排序
+ * 冒泡的思想是比较完成后，进行数据交换位置
+ * 每次排序都能找到一个最大或者最小的
+ * 优化思想：
+ *     1.每次排序完成后可以少排序一次了
+ *     2.如果没有要移动的元素就可以退出了。
  * @modified By：
  * @version:
  */
@@ -11,7 +16,7 @@ public class Maopao {
     public static void main(String[] args) {
         int[] arr = {4,1,5,9,2,7,8,0,4};
         int len = arr.length;
-        arr = method2(arr,len);
+        arr = pra1(arr);
 
         for(int mer:arr){
             System.out.print(mer+",");
@@ -33,6 +38,12 @@ public static int[] method1(int[] arr,int len){
                 arr[j+1] = temp;
             }
         }
+        System.out.println("第"+(i+1)+"次排序后的结果");
+        System.out.print("{");
+        for (int j = 0; j < len; j++) {
+            System.out.print(arr[j]+",");
+        }
+        System.out.print("}");
     }
     return arr;
 }
@@ -63,4 +74,19 @@ public static int[] method1(int[] arr,int len){
         }
         return arr;
     }
+
+    public static int[] pra1(int[] arr){
+        int len = arr.length;
+        for (int i = 0; i < len; i++) {
+            for (int j = 0; j < (len-i-1); j++) {
+                if(arr[j] > arr[j+1]){
+                    int tem = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tem;
+                }
+                
+            }
+        }
+        return arr;
+    } 
 }
