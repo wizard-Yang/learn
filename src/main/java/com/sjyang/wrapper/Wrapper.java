@@ -10,5 +10,20 @@ package com.sjyang.wrapper;
  * @version:
  */
 public class Wrapper {
+    public static void main(String[] args) {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("线程正在执行中...");
+                try {
+                    Thread.sleep(90000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        thread.start();
+        System.out.println(thread.getState());
+    }
 
 }

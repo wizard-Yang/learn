@@ -1,4 +1,4 @@
-package com.sjyang.link_list;
+package com.sjyang.单链表;
 
 /**
  * @author ：saijun.yang

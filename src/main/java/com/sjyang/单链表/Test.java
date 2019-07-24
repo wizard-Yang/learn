@@ -1,4 +1,7 @@
-package com.sjyang.link_list;
+package com.sjyang.单链表;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author ：saijun.yang
@@ -9,6 +12,7 @@ package com.sjyang.link_list;
  */
 public class Test {
     public static void main(String[] args) {
+        Map map = new HashMap();
         SingleLinkList single = new SingleLinkList();
         Node n1 = new Node(1);
         Node n2 = new Node(2);
