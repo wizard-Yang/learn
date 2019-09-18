@@ -8,6 +8,8 @@ package com.sjyang.extend;
  */
 public class Tesr {
     public static void main(String[] args) {
+        CheckProtect checkProtect = new CheckProtect();
+        checkProtect.function();
         Son son = new Son();
         son.add();
     }

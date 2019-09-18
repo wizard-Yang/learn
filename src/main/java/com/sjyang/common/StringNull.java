@@ -11,8 +11,8 @@ public class StringNull {
     public static void main(String[] args) {
         ((StringNull)null).say("null的强转");
         ((StringNull)null).sayAgain();//Exception in thread "main" java.lang.NullPointerException
-
-
+        new StringNull().sayAgain();
+        //null可以强转为任意的对象类型
     }
 
     //属于类调用的static方法
