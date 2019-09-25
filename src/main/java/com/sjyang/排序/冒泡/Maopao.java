@@ -1,4 +1,4 @@
-package com.sjyang.排序;
+package com.sjyang.排序.冒泡;
 
 /**
  * @author ：saijun.yang

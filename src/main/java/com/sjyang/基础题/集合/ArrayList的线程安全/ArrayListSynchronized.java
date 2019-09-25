@@ -13,6 +13,6 @@ public class ArrayListSynchronized {
     public static void main(String[] args) {
         //底层实现还是每个方法都加synchronized
         Collections.synchronizedList(new ArrayList());
-        LinkedList
+        //LinkedList
     }
 }
