@@ -1,4 +1,4 @@
-package com.sjyang.leetcode.最长回文字符串;
+package com.sjyang.leetcode.动态规划.最长回文字符串;
 
 /**
  * @author saijun.yang
@@ -10,7 +10,7 @@ package com.sjyang.leetcode.最长回文字符串;
 public class LongestRepeatString2 {
     public static void main(String[] args) {
         LongestRepeatString2 longestRepeatString2 = new LongestRepeatString2();
-        System.out.println(longestRepeatString2.longestPalindrome1("babad"));
+        System.out.println(longestRepeatString2.longestPalindrome1("abcdefdcba"));
     }
     public String longestPalindrome(String s) {
         if (s == null || s.length() < 1) return "";
@@ -61,7 +61,7 @@ public class LongestRepeatString2 {
             left--;
             right++;
         }
-        return right-left+1;
+        return right-left-1;
     }
 
 }

@@ -1,4 +1,4 @@
-package com.sjyang.leetcode.最长回文字符串;
+package com.sjyang.leetcode.动态规划.最长回文字符串;
 
 import java.util.HashMap;
 import java.util.Map;
