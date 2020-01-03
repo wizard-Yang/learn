@@ -8,7 +8,7 @@ package com.sjyang.数组.数组不初始化直接赋值;
 public class ValueArray {
     public static void main(String[] args) {
         int a[] = null;
-        a[0] = 1;
+        a[0] = 1;//java.lang.NullPointerException
         System.out.println(a.length);
     }
 }
