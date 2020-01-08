@@ -1,4 +1,4 @@
-package com.sjyang.interface_question;
+package com.sjyang.interface_question.接口方法同名同时实现两个接口;
 
 /**
  * @author ：saijun.yang
