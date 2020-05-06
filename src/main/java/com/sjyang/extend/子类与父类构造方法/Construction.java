@@ -9,11 +9,11 @@ package com.sjyang.extend.子类与父类构造方法;
 public class Construction{
     public static void main(String[] args) {
         Son son = new Son();
-        Son son1 = null;
+        //Son son1 = null;
         /**
          * 可以通过对象调用类中的静态方法
          */
-        son1.func();//这样也是可以调用成功的
+        //son1.func();//这样也是可以调用成功的
         //Son.func();
     }
 }

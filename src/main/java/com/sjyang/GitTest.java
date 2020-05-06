@@ -1,5 +1,7 @@
 package com.sjyang;
 
+import com.sjyang.访问修饰符.defaultTest.Test01;
+
 /**
  * @author ：saijun.yang
  * @date ：Created in 2019/4/9 17:33
@@ -12,5 +14,16 @@ public class GitTest{
        /*String a = args[0];
        String b = args[1];
         System.out.println(args.length);*/
+        Test01 test01 = new Test01();
+
     }
 }
+/**
+ * 继承也无法调用default修饰的方法
+ */
+/*
+class Test03 extends Test01{
+    public void method2(){
+        method();
+    }
+}*/

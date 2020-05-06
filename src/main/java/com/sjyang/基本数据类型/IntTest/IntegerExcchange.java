@@ -14,5 +14,9 @@ public class IntegerExcchange {
         Integer i4 =-127;
         System.out.println("i3==i4: "+(i3==i4));
         System.out.println( (3-0.6) == 0.4);
+        //long可以转化为int吗
+        long o = 100L;
+        int a = (int)o;
+        System.out.println(a);
     }
 }

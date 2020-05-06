@@ -5,7 +5,7 @@ package com.sjyang.extend.抽象类构造方法修饰符;
  * @date 2020/1/8 11:07
  * @description
  */
-public class Test extends Abstract {
+public class Test extends AbstractModifyConstruct {
     public static void main(String[] args) {
         Test test = new Test();
     }

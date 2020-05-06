@@ -6,10 +6,10 @@ package com.sjyang.extend.抽象类构造方法修饰符;
  * @description 使用public、protected、默认值修饰构造方法
  * 默认值同样只能本包进行使用
  */
-public class Abstract {
+public class AbstractModifyConstruct {
     String name;
     int age;
-    Abstract(){
+    AbstractModifyConstruct(){
         this.name = "sjyang";
         this.age = 25;
         System.out.println("name"+name+";age"+age);
