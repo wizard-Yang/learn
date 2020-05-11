@@ -1,4 +1,4 @@
-package com.sjyang.Leecode学习.数组中心索引;
+package com.sjyang.leetcode.数组中心索引;
 
 import java.util.Random;
 

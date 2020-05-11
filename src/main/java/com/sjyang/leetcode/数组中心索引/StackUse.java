@@ -1,4 +1,4 @@
-package com.sjyang.stack;
+package com.sjyang.leetcode.数组中心索引;
 
 import java.util.Stack;
 
