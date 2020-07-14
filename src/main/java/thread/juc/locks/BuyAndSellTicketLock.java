@@ -25,7 +25,7 @@ class Ticket2{
     Lock lock = new ReentrantLock();
     //卖票的方式,synchronized本质是队列，锁
     public void sell(){
-        lock.lock();
+        //lock.lock();
         try {
             //业务代码
             if(ticket > 0){
@@ -34,7 +34,7 @@ class Ticket2{
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            lock.unlock();
+            //lock.unlock();
         }
     }
 }

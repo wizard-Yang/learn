@@ -18,7 +18,7 @@ public class StaticInner {
         System.out.println(otherName);
         System.out.println(moreName);
     }
-    static class Inner{
+    public static class Inner{
         public static void function(){
             //System.out.println(name);//无法使用
             System.out.println(smallName);
