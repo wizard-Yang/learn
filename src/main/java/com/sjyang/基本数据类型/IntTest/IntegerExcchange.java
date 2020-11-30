@@ -10,8 +10,8 @@ public class IntegerExcchange {
         Integer i1 =200;
         Integer i2 =200;
         System.out.println("i1==i2: "+(i1==i2));
-        Integer i3 =-127;
-        Integer i4 =-127;
+        Integer i3 =127;
+        Integer i4 =127;
         System.out.println("i3==i4: "+(i3==i4));
         System.out.println( (3-0.6) == 0.4);
         //long可以转化为int吗

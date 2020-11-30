@@ -12,12 +12,15 @@ import java.util.Date;
  */
 public class DateCompare {
     public static void main(String[] args) throws ParseException {
+        function1();
+    }
+
+    public static void function1() throws ParseException {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String beginTime = "2017-08-08";
         String endTime = "2017-08-09";
-
-        Date sd1=dateFormat.parse(beginTime);
-        Date sd2=dateFormat.parse(endTime);
+        Date sd1 = dateFormat.parse(beginTime);
+        Date sd2 = dateFormat.parse(endTime);
         System.out.println(sd1.before(sd2));
     }
 }

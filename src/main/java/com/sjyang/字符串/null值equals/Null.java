@@ -11,7 +11,7 @@ public class Null {
     public static void main(String[] args) {
         String str = null;
         Double a = null;
-        System.out.println(a.toString());
+        //System.out.println(a.toString());
         System.out.println("a".equals(null));
         if(str.equals("ac")){
             System.out.println("不可以比较");

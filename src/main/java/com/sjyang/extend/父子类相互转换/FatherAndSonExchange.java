@@ -8,8 +8,11 @@ package com.sjyang.extend.父子类相互转换;
 public class FatherAndSonExchange {
     public static void main(String[] args) {
         Son1 son1 = new Son1();
-        Father father = (Father)son1;
-        System.out.println(father.name);
+        Father father = new Father();
+        Son2 son2 = (Son2)father;
+        System.out.println(son2.name);
+        //Father father = (Father)son1;
+        //System.out.println(father.name);
         //Son2 son2 = (Son2)();
         //System.out.println(son2.name);
     }
