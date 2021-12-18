@@ -2,6 +2,8 @@ package com.sjyang;
 
 import com.sjyang.访问修饰符.defaultTest.Test01;
 
+import java.math.BigDecimal;
+
 /**
  * @author ：saijun.yang
  * @date ：Created in 2019/4/9 17:33
@@ -14,7 +16,8 @@ public class GitTest{
        /*String a = args[0];
        String b = args[1];
         System.out.println(args.length);*/
-        Test01 test01 = new Test01();
+        //Test01 test01 = new Test01();
+        BigDecimal bigDecimal = new BigDecimal("0.0");
 
     }
 }

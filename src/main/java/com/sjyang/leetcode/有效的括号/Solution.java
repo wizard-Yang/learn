@@ -1,6 +1,8 @@
 package com.sjyang.leetcode.有效的括号;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 
@@ -16,14 +18,15 @@ import java.util.Stack;
  */
 public class Solution {
     public static void main(String[] args) {
-        String str1 = "[])";
+        String str1 = "([)]";
         String str2 = "{({})[]}";
         String str3 = "";
-        System.out.println(isValid2(str2));
+        System.out.println(isValid3(str1));
     }
+
     public static boolean isValid(String s) {
         boolean result = true;
-        if(s == null || s.length() == 0){
+        if (s == null || s.length() == 0) {
             return result;
         }
         Set<String> set = new HashSet<>(3);
@@ -35,15 +38,15 @@ public class Solution {
         Stack<Character> stack = new Stack();
         //stack.push(charArr[0]);
         for (int i = 0; i < charArr.length; i++) {
-            if(!stack.isEmpty()){
+            if (!stack.isEmpty()) {
                 char head = stack.peek();
-                String nearTwo = head+String.valueOf(charArr[i]);
-                if(set.contains(nearTwo)){
+                String nearTwo = head + String.valueOf(charArr[i]);
+                if (set.contains(nearTwo)) {
                     stack.pop();
-                }else{
+                } else {
                     stack.push(charArr[i]);
                 }
-            }else{
+            } else {
                 stack.push(charArr[i]);
             }
         }
@@ -54,24 +57,54 @@ public class Solution {
     /**
      * 执行时间是第一次的20倍左右
      * 空间复杂度与第一次基本一致
+     *
      * @param s
      * @return
      */
     public static boolean isValid2(String s) {
-        if(s.isEmpty()) return true;
-        Stack<Character> stack=new Stack<Character>();
-        for(char c:s.toCharArray()){
-            if(c=='(')
+        if (s.isEmpty()) return true;
+        Stack<Character> stack = new Stack<Character>();
+        for (char c : s.toCharArray()) {
+            if (c == '(')
                 stack.push(')');
-            else if(c=='{')
+            else if (c == '{')
                 stack.push('}');
-            else if(c=='[')
+            else if (c == '[')
                 stack.push(']');
-            else if(stack.empty()||c!=stack.pop())
+            else if (stack.empty() || c != stack.pop())
                 return false;
         }
-        if(stack.empty())
+        if (stack.empty())
             return true;
         return false;
+    }
+
+    /**
+     * 进栈出栈
+     *
+     * @param s
+     * @return
+     */
+    public static boolean isValid3(String s) {
+        if (s.isEmpty()) return true;
+        char[] chars = s.toCharArray();
+        Stack<Character> stack = new Stack<Character>();
+        Map<Character,Character> map = new HashMap<Character,Character>();
+        map.put('(',')');
+        map.put('{','}');
+        map.put('[',']');
+        for (int i = 0; i < chars.length; i++) {
+            if(stack.isEmpty()){
+                stack.push(chars[i]);
+                continue;
+            }
+            char head = stack.peek();
+            if((Character)chars[i] == map.get(head)){
+                stack.pop();
+            }else{
+                stack.push(chars[i]);
+            }
+        }
+        return stack.empty();
     }
 }

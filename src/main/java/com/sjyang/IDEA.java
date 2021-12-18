@@ -1,7 +1,10 @@
 package com.sjyang;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author ：saijun.yang
@@ -23,19 +26,21 @@ import java.util.List;
  */
 public class IDEA {
     public static void main(String[] args) {
-        if (args == null) {
-            final double i = 20;
-            if (args != null) {
-                if (args != null) {
-                    List list = new ArrayList();
-                    for (Object o : list) {
-                        for (int i1 = 0; i1 < list.size(); i1++) {
-                            boolean a = false;
-                        }
-                    }
-                }
-            }
+        int[] a = {6,6,6,6};
+        System.out.println(distributeCandies(a));
+    }
 
+    public static int distributeCandies(int[] candyType) {
+        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+        int num = candyType.length/2;
+        int type = 0;
+        for(int i = 0;i<candyType.length;i++){
+            if(map.get(Integer.valueOf(i))== null){
+                type++;
+                map.put(Integer.valueOf(i),Integer.valueOf(i));
+            }
         }
+        BigDecimal.valueOf(1d);
+        return type > num ? num:type;
     }
 }

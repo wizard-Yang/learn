@@ -11,15 +11,11 @@ public class Solution {
     public static void main(String[] args) {
         ThreadLocal threadLocal = new ThreadLocal();
         for (int i = 0; i < 4; i++) {
+            int finalI = i;
             new Thread(){
                 @Override
                 public void run() {
-                    threadLocal.set(System.currentTimeMillis());
-                    try {
-                        TimeUnit.SECONDS.sleep(1);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                    threadLocal.set((Integer) finalI);
                     System.out.println(threadLocal.get());
                 }
             }.start();

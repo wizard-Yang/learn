@@ -4,6 +4,8 @@ import static com.sjyang.数据结构.ENUM.Color.BLACK;
 import static com.sjyang.数据结构.ENUM.Color.BLUE;
 import static com.sjyang.数据结构.ENUM.Color.RED;
 
+import java.util.Objects;
+
 /**
  * @author saijun.yang
  * @date 2020/11/30 16:23
@@ -12,7 +14,7 @@ import static com.sjyang.数据结构.ENUM.Color.RED;
 public class Main {
     public static void main(String[] args) {
         System.out.println("1.枚举当作常量使用");
-        Color[] arr = Color.values();
+       /* Color[] arr = Color.values();
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
@@ -31,11 +33,11 @@ public class Main {
                 color = BLUE;
                 break;
         }
-        System.out.println(color);
-
-        System.out.println("3.向枚举中添加新的方法");
+        System.out.println(color);*/
+        System.out.println("--------------------------------------------------------------------------------------------");
+        //System.out.println("3.向枚举中添加新的方法");
         //System.out.println(Color1.getName(1));
-        System.out.println(Color1.getIndexFunc("红色"));
+        //System.out.println(Color1.getIndexFunc("红色"));
 
        /* System.out.println("简单赋值");
         Color2[] color2s = Color2.values();
@@ -43,5 +45,9 @@ public class Main {
             System.out.println(color2s[i]);
         }*/
 
+        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("4.测试单例模式");
+        SingleTest singleTest = SingleTest.INSTANCE;
+        singleTest.function();
     }
 }
