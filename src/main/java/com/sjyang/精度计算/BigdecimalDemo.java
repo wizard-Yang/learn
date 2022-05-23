@@ -10,8 +10,8 @@ import java.math.RoundingMode;
  */
 public class BigdecimalDemo {
     public static void main(String[] args) {
-        Double dou = new Double(501111111);
+        Double dou = new Double(100);
         BigDecimal bigDecimal = new BigDecimal(dou);
-        System.out.println(bigDecimal.divide(new BigDecimal(100000000),2, RoundingMode.HALF_UP));
+        System.out.println(bigDecimal.divide(new BigDecimal(3),8, RoundingMode.HALF_UP));
     }
 }
